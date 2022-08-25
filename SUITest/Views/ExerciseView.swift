@@ -10,9 +10,9 @@ import AVKit
 
 struct ExerciseView: View {
     @Binding var selectedTab: Int
+    @EnvironmentObject var history: HistoryStore
     let index: Int
 
-    @State private var rating = 0
     @State private var showHistory = false
     @State private var showSuccess = false
     @State private var timerDone = false
@@ -44,6 +44,7 @@ struct ExerciseView: View {
                         showTimer.toggle()
                     }
                     Button(NSLocalizedString("Done", comment: "mark as finished")) {
+                        history.addDoneExercise(Exercise.exercises[index].exerciseName)
                         timerDone = false
                         showTimer.toggle()
                         if lastExercise {
@@ -61,7 +62,7 @@ struct ExerciseView: View {
                     TimerView(timerDone: $timerDone)
                 }
                 Spacer()
-                RatingView(rating: $rating)
+                RatingView(exerciseIndex: index)
                     .padding()
                 Button(NSLocalizedString("History", comment: "view user activity")) {
                     showHistory.toggle()
@@ -75,6 +76,8 @@ struct ExerciseView: View {
 
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseView(selectedTab: .constant(3), index: 3)
+        ExerciseView(selectedTab: .constant(0), index: 0)
+            .environmentObject(HistoryStore())
+
     }
 }
