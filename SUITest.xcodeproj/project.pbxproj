@@ -13,6 +13,7 @@
 		1B8CA4AA28B6120300B7D5BA /* HistoryStoreDevData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CA4A928B6120300B7D5BA /* HistoryStoreDevData.swift */; };
 		1B8CA4AD28B6143300B7D5BA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CA4AF28B6143300B7D5BA /* Localizable.strings */; };
 		1B8CA4B128B6192300B7D5BA /* squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CA4B328B6192300B7D5BA /* squat.mp4 */; };
+		1B8CA4BE28B7563700B7D5BA /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CA4BD28B7563700B7D5BA /* TimerView.swift */; };
 		1BE4E8AC28B4C43700FEE6D1 /* SUITestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4E8AB28B4C43700FEE6D1 /* SUITestApp.swift */; };
 		1BE4E8AE28B4C43700FEE6D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4E8AD28B4C43700FEE6D1 /* ContentView.swift */; };
 		1BE4E8B028B4C43900FEE6D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE4E8AF28B4C43900FEE6D1 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		1B8CA4AE28B6143300B7D5BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1B8CA4B028B6178600B7D5BA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1B8CA4B228B6192300B7D5BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = Base.lproj/squat.mp4; sourceTree = "<group>"; };
+		1B8CA4BD28B7563700B7D5BA /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		1BE4E8A828B4C43700FEE6D1 /* SUITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SUITest.app; path = "/Users/mrbat/Desktop/SUITest/build/Debug-iphoneos/SUITest.app"; sourceTree = "<absolute>"; };
 		1BE4E8AB28B4C43700FEE6D1 /* SUITestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUITestApp.swift; sourceTree = "<group>"; };
 		1BE4E8AD28B4C43700FEE6D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				1BE4E8CF28B4DE3F00FEE6D1 /* RatingView.swift */,
 				1BE4E8D128B4DF7300FEE6D1 /* HistoryView.swift */,
 				1BE4E8D828B4F01600FEE6D1 /* SuccessView.swift */,
+				1B8CA4BD28B7563700B7D5BA /* TimerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B8CA4BE28B7563700B7D5BA /* TimerView.swift in Sources */,
 				1BE4E8D228B4DF7300FEE6D1 /* HistoryView.swift in Sources */,
 				1BE4E8D728B4EDB400FEE6D1 /* Image + Extension.swift in Sources */,
 				1BE4E8D928B4F01600FEE6D1 /* SuccessView.swift in Sources */,

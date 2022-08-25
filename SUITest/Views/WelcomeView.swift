@@ -8,19 +8,23 @@
 import SwiftUI
 
 struct WelcomeView: View {
-    var body: some View {
-        HeaderView(titleText: NSLocalizedString("Welcome", comment: "greeting"))
-    }
-}
+    @Binding var selectedTab: Int
+    
+    @State private var showHistory = false
 
-struct WelcomeView_Previews: PreviewProvider {
-    static var previews: some View {
+    var body: some View {
         ZStack {
             VStack {
-                WelcomeView()
+                HeaderView(
+                    selectedTab: $selectedTab,
+                    titleText: NSLocalizedString("Welcome", comment: "greeting")
+                )
                 Spacer()
-                Button(NSLocalizedString("History", comment: "view user activity")) {}
-                    .padding(.bottom)
+                Button(NSLocalizedString("History", comment: "view user activity")) {
+                    showHistory.toggle()
+                }
+                .sheet(isPresented: $showHistory) { HistoryView(showHistory: $showHistory) }
+                .padding(.bottom)
             }
             VStack {
                 HStack(alignment: .bottom) {
@@ -34,7 +38,7 @@ struct WelcomeView_Previews: PreviewProvider {
                         .resizedToFill(width: 240, height: 240)
                         .clipShape(Circle())
                 }
-                Button(action: {}) {
+                Button(action: { selectedTab = 0 }) {
                     Text(NSLocalizedString("Get Started", comment: "invitation"))
                     Image(systemName: "arrow.right.circle")
                 }
@@ -46,5 +50,11 @@ struct WelcomeView_Previews: PreviewProvider {
                 )
             }
         }
+    }
+}
+
+struct WelcomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        WelcomeView(selectedTab: .constant(9))
     }
 }
